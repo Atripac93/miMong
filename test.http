@@ -1,0 +1,15 @@
+GET http://localhost:3090/getAuthors
+
+####
+
+POST http://localhost:3090/createAuthors
+Content-Type: application/json
+
+{
+    "nome":"Carlo",
+    "cognome":"Atri",
+    "email": "carlAuthor@gmail.com",
+    "dataDiNascita":"22.10.1992",
+    "avatar": "gingo"
+    
+}
