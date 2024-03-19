@@ -6,10 +6,13 @@ POST http://localhost:3090/createAuthors
 Content-Type: application/json
 
 {
-    "nome":"Carlo",
-    "cognome":"Atri",
-    "email": "carlAuthor@gmail.com",
-    "dataDiNascita":"22.10.1992",
-    "avatar": "gingo"
+    "nome":"pieroy",
+    "cognome":"Atrispa",
+    "email": "pierolatrispar@gmail.com",
+    "dataDiNascita":"12.12.1992",
+    "avatar": "ginl"
     
 }
+
+####
+POST http://localhost:3090/getAuthors/65f9eec53c7ea5e9578c9a89
