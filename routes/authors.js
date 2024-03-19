@@ -14,6 +14,26 @@ router.get("/getAuthors", async (req, res) => {
   }
 });
 
+router.get("/getAuthors/:id", async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const author = await AuthorsModel.findById(id);
+    if (!author) {
+      return res.status(404).send({
+        statusCode: 404,
+        message: "Author not here",
+      });
+    }
+    res.status(200).send(author);
+  } catch (e) {
+    res.status(500).send({
+      statusCode: 500,
+      message: "big error",
+    });
+  }
+});
+
 router.post("/createAuthors", async (req, res) => {
   const newAuthors = new AuthorsModel({
     nome: req.body.nome,
